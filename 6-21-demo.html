@@ -42,6 +42,13 @@
 				Checked names: {{checkedNames}}
 			</span>
 		</div>
+		
+		<div id="example-6">
+			<span>Multiline message is:</span>
+			<p style="white-space: pre-line;">{{message}}</p>
+			<br />
+			<textarea v-model="message" placeholder="add multiple lines"></textarea>
+		</div>
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 		<script>
 			var example = new Vue({
@@ -94,6 +101,13 @@
 			
 			var example5 = new Vue({
 				el: '#example-5',
+				data: {
+					message: ''
+				}
+			})
+			
+			var example6 = new Vue({
+				el: "#example-6",
 				data: {
 					message: ''
 				}
